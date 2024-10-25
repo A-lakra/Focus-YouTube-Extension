@@ -1,0 +1,38 @@
+{
+  "manifest_version": 3,
+  "name": "YouTube Focus and pomodoro timer",
+  "version": "1.0",
+  "description": "Enhance your focus on YouTube by hiding distractions.",
+  "permissions": [
+    "activeTab",
+    "alarms",
+    "scripting",
+    "storage",
+    "tabs",
+    "audio"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "images/icon16.png",
+      "48": "images/48icon.png",
+      "128": "images/128icon.png"
+    }
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*.youtube.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["alarm.mp3"],
+      "matches": ["*://*/*"]
+    }
+  ]
+}

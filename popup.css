@@ -1,0 +1,121 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f0f0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 400px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.mode-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.mode-button {
+    flex: 1;
+    padding: 8px 16px;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+    margin: 0 5px; /* Adjust margin for spacing between buttons */
+}
+
+.mode-button:hover {
+    background-color: #0056b3;
+}
+
+.input-container {
+    display: flex;
+    align-items: center; /* Align items vertically centered */
+    margin-bottom: 10px;
+}
+
+.input-container label {
+    margin-right: 10px; /* Add space between label and input */
+    font-size: 14px;
+}
+
+.input {
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 80px; /* Adjust the width as per your preference */
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.button {
+    flex: 1;
+    padding: 12px 20px;
+    font-size: 16px;
+    text-align: center;
+    cursor: pointer;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+    margin-right: 10px; /* Add space between buttons */
+}
+
+.button:last-child {
+    margin-right: 0; /* Remove margin from the last button */
+}
+
+.button:hover {
+    background-color: #0056b3;
+}
+
+#timerDisplay {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.alert {
+    padding: 10px;
+    background-color: #dc3545;
+    color: #fff;
+    border-radius: 4px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+@media (max-width: 500px) {
+    .button-container {
+        flex-direction: column;
+    }
+
+    .button {
+        margin-top: 10px;
+    }
+}
+
+.mode-button.active {
+    background-color: rgb(108, 210, 108);
+}
+
+/* Center the text for .center-text class */
+.center-text {
+    text-align: center;
+}
